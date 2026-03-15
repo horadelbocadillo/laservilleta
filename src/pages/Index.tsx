@@ -10,23 +10,10 @@ const Index = () => {
       {/* HERO */}
       <section className="flex flex-col items-center justify-center px-6 pt-20 pb-24 md:pt-32 md:pb-40">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease }}
-          className="relative w-full max-w-2xl mb-16"
-        >
-          <img
-            src={napkinHero}
-            alt="Servilleta con iniciales bordadas en hilo azul"
-            className="w-full h-auto rounded-sm shadow-object outline outline-1 outline-foreground/5 -outline-offset-1"
-          />
-        </motion.div>
-
-        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease, delay: 0.4 }}
-          className="text-center space-y-4"
+          transition={{ duration: 0.6, ease }}
+          className="text-center space-y-4 mb-16"
         >
           <h1
             className="font-serif text-[clamp(2.5rem,8vw,4.5rem)] tracking-[-0.02em] leading-[1.1]"
@@ -37,6 +24,19 @@ const Index = () => {
           <p className="font-serif italic text-xl md:text-2xl text-foreground/70">
             Dos letras de 27 para un abecedario completo
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease, delay: 0.4 }}
+          className="relative w-full max-w-2xl"
+        >
+          <img
+            src={napkinHero}
+            alt="Servilleta con iniciales bordadas en hilo azul"
+            className="w-full h-auto rounded-sm shadow-object outline outline-1 outline-foreground/5 -outline-offset-1"
+          />
         </motion.div>
       </section>
 
