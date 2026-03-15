@@ -79,7 +79,7 @@ const Index = () => {
       {/* FOOTER */}
       <footer className="flex flex-col items-center gap-4 pb-12 opacity-40 hover:opacity-100 transition-opacity duration-500">
         <a
-          href="https://twitter.com"
+          href="https://twitter.com/guiomargdp"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-primary transition-colors"
