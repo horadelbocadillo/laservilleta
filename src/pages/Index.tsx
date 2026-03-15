@@ -22,7 +22,7 @@ const Index = () => {
             La Servilleta
           </h1>
           <p className="font-serif italic text-xl md:text-2xl text-foreground/70">
-            Dos letras de 27 para un abecedario completo
+            2 letras de 27 para un abecedario completo
           </p>
         </motion.div>
 
