@@ -66,7 +66,7 @@ const Index = () => {
         className="flex flex-col items-center px-6 pb-32 md:pb-48"
       >
         <a
-          href="mailto:laservilleta@gmail.com?subject=Tengo una servilleta"
+          href="mailto:la.servilleta.908@gmail.com?subject=Tengo una servilleta"
           className="group relative px-12 py-4 border border-primary text-primary bg-transparent transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:-translate-y-px active:scale-[0.98] will-change-transform"
         >
           <span className="text-lg font-medium tracking-wide">Escríbeme</span>
