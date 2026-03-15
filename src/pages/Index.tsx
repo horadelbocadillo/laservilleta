@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import napkinHero from "@/assets/napkin-hero.jpg";
 
-const ease = [0.25, 0.1, 0.25, 1];
+const ease = [0.25, 0.1, 0.25, 1] as [number, number, number, number];
 
 const Index = () => {
   return (
