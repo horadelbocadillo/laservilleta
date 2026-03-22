@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import napkinHero from "@/assets/napkin-hero.jpg";
 
 const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
 const FOUND = new Set(['M', 'R']);
