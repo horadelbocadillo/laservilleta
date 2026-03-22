@@ -41,6 +41,23 @@ const Index = () => {
         <div className="hero-scroll">La letra</div>
       </section>
 
+      {/* IMAGEN SERVILLETA */}
+      <section className="section" style={{ textAlign: "center", paddingTop: "2rem", paddingBottom: "2rem" }}>
+        <img
+          ref={reveal}
+          src={napkinHero}
+          alt="Servilleta bordada con las iniciales MR en hilo azul"
+          className="reveal"
+          style={{
+            maxWidth: "min(500px, 90vw)",
+            width: "100%",
+            margin: "0 auto",
+            borderRadius: "12px",
+            boxShadow: "0 12px 40px rgba(0,0,0,0.12)",
+          }}
+        />
+      </section>
+
       {/* 1. LA LETRA */}
       <section className="typo-section section">
         <h2 ref={reveal} className="reveal">Esta no es una M cualquiera</h2>
