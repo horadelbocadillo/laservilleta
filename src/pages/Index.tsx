@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import napkinHero from "@/assets/napkin-hero.jpg";
 
 const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
 const FOUND = new Set(['M', 'R']);
@@ -38,6 +39,23 @@ const Index = () => {
           Unas iniciales bordadas en una servilleta con una tipografía diferente a cualquier fuente conocida. Solo tengo dos letras. Busco las 25 que faltan.
         </p>
         <div className="hero-scroll">La letra</div>
+      </section>
+
+      {/* IMAGEN SERVILLETA */}
+      <section className="section" style={{ textAlign: "center", paddingTop: "2rem", paddingBottom: "2rem" }}>
+        <img
+          ref={reveal}
+          src={napkinHero}
+          alt="Servilleta bordada con las iniciales MR en hilo azul"
+          className="reveal"
+          style={{
+            maxWidth: "min(500px, 90vw)",
+            width: "100%",
+            margin: "0 auto",
+            borderRadius: "12px",
+            boxShadow: "0 12px 40px rgba(0,0,0,0.12)",
+          }}
+        />
       </section>
 
       {/* 1. LA LETRA */}
