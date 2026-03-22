@@ -141,7 +141,7 @@ const Index = () => {
         </div>
         <div ref={reveal} className="cta-actions reveal">
           <a
-            href="https://twitter.com/intent/tweet?text=Buscan%20servilletas%20de%20internados%20de%20los%20a%C3%B1os%2050%20para%20rescatar%20una%20tipograf%C3%ADa%20olvidada%20y%20convertirla%20en%20una%20fuente%20libre.%20%23LaServilleta&url=https://laservilleta.lovable.app"
+            href="https://twitter.com/intent/tweet?text=Buscan%20servilletas%20de%20internados%20de%20los%20a%C3%B1os%2050%20para%20rescatar%20una%20tipograf%C3%ADa%20olvidada%20y%20convertirla%20en%20una%20fuente%20libre.%20%23LaServilleta%20%40guiomargdp&url=https://laservilleta.lovable.app"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-primary"
