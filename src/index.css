@@ -155,7 +155,7 @@ body {
   justify-content: center;
   gap: 1.5rem;
   padding: 2rem 0;
-  max-width: 200px;
+  max-width: 250px;
   margin: 0 auto;
 }
 
@@ -163,9 +163,9 @@ body {
 
 .divider-symbol {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--blue);
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
 }
 
 /* ---- TYPOGRAPHY ANALYSIS ---- */
@@ -290,6 +290,12 @@ body {
   font-weight: 700;
 }
 
+.letter-cell.deduced {
+  background: #e8eff5;
+  color: var(--blue);
+  border-color: var(--blue-light);
+}
+
 .letter-cell.missing {
   border-style: dashed;
   border-color: var(--gray-faint);
@@ -298,6 +304,146 @@ body {
 .letter-cell.missing:hover {
   border-color: var(--blue-light);
   color: var(--blue-light);
+}
+
+/* ---- SISTEMA (REGLAS) ---- */
+.sistema {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.sistema h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.regla {
+  margin-bottom: 2rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--blue);
+}
+
+.regla-numero {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  color: var(--blue);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.regla-titulo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.regla-texto {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.7;
+}
+
+/* ---- LABORATORIO ---- */
+.laboratorio {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.laboratorio h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.laboratorio .subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-light);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.laboratorio .intro {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--gray);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 3rem;
+}
+
+.grupo-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-faint);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.grupo {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.letra-card {
+  text-align: center;
+  width: 140px;
+}
+
+.letra-card svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.letra-nombre {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  color: var(--black);
+  margin-top: 0.4rem;
+}
+
+.letra-estado {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+}
+
+.estado-conocida { color: var(--blue); }
+.estado-deducida { color: var(--gray-faint); }
+
+.laboratorio-cta {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--blue);
 }
 
 /* ---- CTA ---- */
@@ -468,6 +614,8 @@ footer p {
     gap: 5px;
   }
   .letter-cell { font-size: 1rem; }
+  .grupo { gap: 1rem; }
+  .letra-card { width: 110px; }
 }
 
 @layer base {
