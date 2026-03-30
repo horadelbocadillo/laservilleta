@@ -122,6 +122,26 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ANIMACIÓN M */}
+      <section className="section" style={{ textAlign: "center", padding: "2rem 0" }}>
+        <video
+          ref={reveal}
+          className="reveal"
+          src="/videos/animacion-M.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            maxWidth: "min(500px, 90vw)",
+            width: "100%",
+            margin: "0 auto",
+            borderRadius: "12px",
+            display: "block",
+          }}
+        />
+      </section>
+
       {/* ABECEDARIO */}
       <section ref={reveal} className="alphabet-section section reveal">
         <h2>El abecedario</h2>
