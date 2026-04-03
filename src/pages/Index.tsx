@@ -251,7 +251,7 @@ const Index = () => {
       </section>
 
       {/* EL SISTEMA */}
-      <section className="sistema">
+      <section id="el-sistema" className="sistema">
         <div ref={reveal} className="divider reveal">
           <span className="divider-line" />
           <span className="divider-symbol">LAS REGLAS</span>
