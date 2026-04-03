@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Twitter, Mail, ArrowUp } from "lucide-react";
 import napkinHero from "@/assets/napkin-hero.jpg";
 
 const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
@@ -7,6 +8,7 @@ const DEDUCED = new Set(['A', 'B', 'D', 'E', 'I', 'N', 'O', 'P', 'U']);
 
 const Index = () => {
   const revealRefs = useRef<(HTMLElement | null)[]>([]);
+  const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -21,6 +23,14 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowNav(window.scrollY > window.innerHeight * 0.85);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const reveal = (el: HTMLElement | null) => {
     if (el && !revealRefs.current.includes(el)) {
       revealRefs.current.push(el);
@@ -29,7 +39,89 @@ const Index = () => {
 
   return (
     <div className="page-wrapper">
-      {/* HERO */}
+      {/* STICKY NAV */}
+      <nav
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          zIndex: 100,
+          height: 50,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "2rem",
+          background: "rgba(255,255,255,0.97)",
+          boxShadow: "0 1px 8px rgba(0,0,0,0.06)",
+          fontFamily: "'JetBrains Mono', monospace",
+          fontSize: "0.6rem",
+          letterSpacing: "0.15em",
+          textTransform: "uppercase" as const,
+          transition: "transform 0.3s ease, opacity 0.3s ease",
+          transform: showNav ? "translateY(0)" : "translateY(-100%)",
+          opacity: showNav ? 1 : 0,
+          pointerEvents: showNav ? "auto" : "none",
+        }}
+      >
+        {[
+          { label: "La letra", href: "#la-letra" },
+          { label: "Origen", href: "#origen" },
+          { label: "El sistema", href: "#el-sistema" },
+          { label: "El laboratorio", href: "#el-laboratorio" },
+          { label: "Colabora", href: "#colabora" },
+        ].map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            style={{
+              color: "#1e3a56",
+              textDecoration: "none",
+              padding: "0.25rem 0",
+              borderBottom: "1px solid transparent",
+              transition: "border-color 0.2s",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.borderColor = "#1e3a56")}
+            onMouseLeave={(e) => (e.currentTarget.style.borderColor = "transparent")}
+          >
+            {item.label}
+          </a>
+        ))}
+      </nav>
+
+      {/* FLOATING ACTION BUTTONS */}
+      <div
+        style={{
+          position: "fixed",
+          bottom: 20,
+          right: 20,
+          zIndex: 100,
+          display: "flex",
+          flexDirection: "column",
+          gap: 8,
+        }}
+      >
+        <a
+          href="https://twitter.com/intent/tweet?text=Buscan%20servilletas%20de%20internados%20de%20los%20a%C3%B1os%2050%20para%20rescatar%20una%20tipograf%C3%ADa%20olvidada%20y%20convertirla%20en%20una%20fuente%20libre.%20%23LaServilleta&url=https://laservilleta.lovable.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ width: 44, height: 44, borderRadius: 22, background: "#1e3a56", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}
+        >
+          <Twitter size={20} />
+        </a>
+        <a
+          href="mailto:la.servilleta.908@gmail.com?subject=Tengo%20una%20letra%20para%20La%20Servilleta"
+          style={{ width: 44, height: 44, borderRadius: 22, background: "#1e3a56", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}
+        >
+          <Mail size={20} />
+        </a>
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{ width: 44, height: 44, borderRadius: 22, background: "#1e3a56", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", border: "none", cursor: "pointer" }}
+        >
+          <ArrowUp size={20} />
+        </button>
+      </div>
       <section className="hero section">
         <div className="hero-counter">2 de 27 letras para un alfabeto completo</div>
         <h1 className="hero-title">
@@ -59,7 +151,7 @@ const Index = () => {
       </section>
 
       {/* LA LETRA */}
-      <section className="typo-section section">
+      <section id="la-letra" className="typo-section section">
         <h2 ref={reveal} className="reveal">Esta no es una M cualquiera</h2>
         <div ref={reveal} className="typo-compare reveal">
           <div className="typo-box">
@@ -87,7 +179,7 @@ const Index = () => {
       </section>
 
       {/* ORIGEN */}
-      <section className="story section">
+      <section id="origen" className="story section">
         <div ref={reveal} className="divider reveal">
           <span className="divider-line" />
           <span className="divider-symbol">ORIGEN</span>
@@ -159,7 +251,7 @@ const Index = () => {
       </section>
 
       {/* EL SISTEMA */}
-      <section className="sistema">
+      <section id="el-sistema" className="sistema">
         <div ref={reveal} className="divider reveal">
           <span className="divider-line" />
           <span className="divider-symbol">LAS REGLAS</span>
@@ -209,7 +301,7 @@ const Index = () => {
       </section>
 
       {/* EL LABORATORIO */}
-      <section className="laboratorio">
+      <section id="el-laboratorio" className="laboratorio">
         <div ref={reveal} className="divider reveal">
           <span className="divider-line" />
           <span className="divider-symbol">LETRAS DEDUCIDAS</span>
@@ -345,7 +437,7 @@ const Index = () => {
       </section>
 
       {/* LA PETICIÓN */}
-      <section className="cta-section section">
+      <section id="colabora" className="cta-section section">
         <div ref={reveal} className="reveal">
           <h2>Puede estar en un cajón, en un arcón, en un mercadillo</h2>
           <p>Busco servilletas, sábanas o cualquier pieza de ajuar escolar de internados españoles de los años 40, 50 o 60 que tenga iniciales con esta misma tipografía.</p>
