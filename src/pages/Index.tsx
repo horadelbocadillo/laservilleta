@@ -151,7 +151,7 @@ const Index = () => {
       </section>
 
       {/* LA LETRA */}
-      <section className="typo-section section">
+      <section id="la-letra" className="typo-section section">
         <h2 ref={reveal} className="reveal">Esta no es una M cualquiera</h2>
         <div ref={reveal} className="typo-compare reveal">
           <div className="typo-box">
