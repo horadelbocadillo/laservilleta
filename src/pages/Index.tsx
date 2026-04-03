@@ -8,6 +8,7 @@ const DEDUCED = new Set(['A', 'B', 'D', 'E', 'I', 'N', 'O', 'P', 'U']);
 
 const Index = () => {
   const revealRefs = useRef<(HTMLElement | null)[]>([]);
+  const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -20,6 +21,14 @@ const Index = () => {
     );
     revealRefs.current.forEach((el) => el && observer.observe(el));
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowNav(window.scrollY > window.innerHeight * 0.85);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const reveal = (el: HTMLElement | null) => {
