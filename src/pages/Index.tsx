@@ -179,7 +179,7 @@ const Index = () => {
       </section>
 
       {/* ORIGEN */}
-      <section className="story section">
+      <section id="origen" className="story section">
         <div ref={reveal} className="divider reveal">
           <span className="divider-line" />
           <span className="divider-symbol">ORIGEN</span>
