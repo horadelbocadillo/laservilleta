@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Twitter, Mail, ArrowUp } from "lucide-react";
 import napkinHero from "@/assets/napkin-hero.jpg";
 
 const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
