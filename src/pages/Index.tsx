@@ -186,7 +186,7 @@ const Index = () => {
           <span className="divider-line" />
         </div>
         <div ref={reveal} className="reveal">
-          <p>Esta tipografía viene de Los Salesianos de El Campillo, un internado en Antequera, Málaga. Año 1952.</p>
+          <p>Esta tipografía viene de Los Salesianos de «El Campillo», un internado en Antequera, Málaga. Año 1952.</p>
         </div>
         <div ref={reveal} className="reveal">
           <p>El colegio asignaba un número a cada alumno y marcaba todo su ajuar —sábanas, toallas, servilletas— con sus iniciales y un número. No lo hacían las familias. Lo hacía el colegio.</p>
