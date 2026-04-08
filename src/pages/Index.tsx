@@ -312,8 +312,8 @@ const Index = () => {
         <p className="intro" ref={reveal}>Solo tengo dos letras reales: la M y la R. Pero aplicando las reglas del sistema he empezado a deducir cómo serían las demás. Estas son hipótesis — las letras que el sistema produciría si sigue su propia lógica. Cada vez que alguien me envíe una letra real, podré confirmar o corregir estas deducciones.</p>
 
         {/* Grupo 1 — Estructura de arco + asta */}
-        <div className="grupo-label" ref={reveal}>Grupo 1 — Estructura de arco + asta</div>
-        <div className="grupo" ref={reveal}>
+        <div className="grupo-label" ref={reveal}>Grupo 1 — Arco + asta: M · N · Ñ · A · W · V</div>
+        <div className="grupo" ref={reveal} style={{ overflowX: "auto" }}>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
               <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
@@ -325,7 +325,7 @@ const Index = () => {
             <div className="letra-estado estado-conocida">Conocida</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
               <path d="M 35 220 C 22 170, 18 100, 30 60 C 45 22, 90 12, 140 18" fill="none" />
               <line x1="140" y1="18" x2="140" y2="200" />
@@ -334,7 +334,17 @@ const Index = () => {
             <div className="letra-estado estado-deducida">Deducida</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 35 220 C 22 170, 18 100, 30 60 C 45 22, 90 12, 140 18" fill="none" />
+              <line x1="140" y1="18" x2="140" y2="200" />
+              <line x1="80" y1="5" x2="130" y2="5" />
+            </svg>
+            <div className="letra-nombre">Ñ</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
               <path d="M 35 220 C 22 170, 18 100, 30 60 C 45 22, 90 12, 140 18" fill="none" />
               <line x1="140" y1="18" x2="140" y2="200" />
@@ -343,10 +353,29 @@ const Index = () => {
             <div className="letra-nombre">A</div>
             <div className="letra-estado estado-deducida">Deducida</div>
           </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 35 20 C 22 60, 18 130, 30 160 C 45 195, 90 205, 140 200" fill="none" />
+              <line x1="140" y1="200" x2="140" y2="20" />
+              <line x1="115" y1="70" x2="115" y2="170" />
+            </svg>
+            <div className="letra-nombre">W</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 35 20 C 22 60, 18 130, 30 160 C 45 195, 90 205, 140 200" fill="none" />
+              <line x1="140" y1="200" x2="140" y2="20" />
+            </svg>
+            <div className="letra-nombre">V</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+          </div>
         </div>
 
         {/* Grupo 2 — Estructura de asta + panza */}
-        <div className="grupo-label" ref={reveal}>Grupo 2 — Estructura de asta + panza</div>
+        <div className="grupo-label" ref={reveal}>Grupo 2 — Asta + panza: R · P · B · D</div>
         <div className="grupo" ref={reveal}>
           <div className="letra-card">
             <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -359,7 +388,7 @@ const Index = () => {
             <div className="letra-estado estado-conocida">Conocida</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
               <line x1="55" y1="200" x2="55" y2="30" />
               <path d="M 55 30 C 70 28, 145 30, 148 70 C 151 110, 120 138, 55 140" fill="none" />
@@ -368,20 +397,20 @@ const Index = () => {
             <div className="letra-estado estado-deducida">Deducida</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
               <line x1="55" y1="200" x2="55" y2="30" />
-              <path d="M 55 30 C 70 28, 145 28, 148 65 C 151 100, 120 115, 55 117" fill="none" />
-              <path d="M 55 117 C 70 115, 150 112, 153 148 C 156 184, 120 198, 55 200" fill="none" />
+              <path d="M 55 30 C 63 28, 130 28, 133 63 C 136 98, 110 112, 55 114" fill="none" />
+              <path d="M 55 114 C 63 112, 140 110, 143 148 C 146 186, 110 200, 55 200" fill="none" />
             </svg>
             <div className="letra-nombre">B</div>
             <div className="letra-estado estado-deducida">Deducida</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
               <line x1="55" y1="200" x2="55" y2="30" />
-              <path d="M 55 30 C 70 26, 170 25, 172 100 C 174 175, 100 215, 75 225" fill="none" />
+              <path d="M 55 30 C 70 26, 170 25, 172 100 C 174 175, 120 215, 90 230" fill="none" />
             </svg>
             <div className="letra-nombre">D</div>
             <div className="letra-estado estado-deducida">Deducida</div>
@@ -389,31 +418,39 @@ const Index = () => {
         </div>
 
         {/* Grupo 3 — Vocales */}
-        <div className="grupo-label" ref={reveal}>Grupo 3 — Vocales</div>
+        <div className="grupo-label" ref={reveal}>Grupo 3 — Vocales: O · Q · U · I · E</div>
         <div className="grupo" ref={reveal}>
           <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
-              <path d="M 45 25 C 43 75, 38 130, 50 158 C 65 188, 135 190, 150 160 C 162 132, 158 75, 155 25" fill="none" />
-            </svg>
-            <div className="letra-nombre">U</div>
-            <div className="letra-estado estado-deducida">Deducida</div>
-          </div>
-          <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <path d="M 98 28 C 55 24, 38 60, 40 108 C 42 155, 58 192, 102 189 C 145 186, 162 152, 160 106 C 158 60, 142 26, 102 28" fill="none" />
             </svg>
             <div className="letra-nombre">O</div>
             <div className="letra-estado estado-deducida">Deducida</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <path d="M 98 28 C 55 24, 38 60, 40 108 C 42 155, 58 192, 102 189 C 145 186, 162 152, 160 106 C 158 60, 142 26, 102 28" fill="none" />
+              <line x1="82" y1="202" x2="120" y2="202" />
+            </svg>
+            <div className="letra-nombre">Q</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <path d="M 45 25 C 43 75, 38 130, 50 158 C 65 188, 135 190, 150 160 C 162 132, 158 75, 155 25" fill="none" />
+            </svg>
+            <div className="letra-nombre">U</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <path d="M 100 195 C 99 155, 101 115, 100 80 C 99 55, 101 35, 100 25" fill="none" />
             </svg>
             <div className="letra-nombre">I</div>
             <div className="letra-estado estado-deducida">Deducida</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.5">
+            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <path d="M 145 30 C 95 26, 42 55, 40 108 C 38 162, 92 195, 145 190" fill="none" />
               <line x1="58" y1="110" x2="105" y2="110" />
             </svg>
