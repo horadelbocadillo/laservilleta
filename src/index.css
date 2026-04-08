@@ -293,7 +293,7 @@ body {
 .letter-cell.deduced {
   background: #e8eff5;
   color: var(--blue);
-  border-color: var(--blue-light);
+  border-color: #5a82a6;
 }
 
 .letter-cell.missing {
