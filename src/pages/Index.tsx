@@ -4,7 +4,7 @@ import napkinHero from "@/assets/napkin-hero.jpg";
 
 const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
 const FOUND = new Set(['M', 'R']);
-const DEDUCED = new Set(['A', 'B', 'D', 'E', 'I', 'N', 'O', 'P', 'U']);
+const DEDUCED = new Set(['A', 'B', 'D', 'E', 'I', 'N', 'Ñ', 'O', 'P', 'Q', 'U', 'V', 'W']);
 
 const Index = () => {
   const revealRefs = useRef<(HTMLElement | null)[]>([]);
