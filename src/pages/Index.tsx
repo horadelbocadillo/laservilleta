@@ -204,7 +204,7 @@ const Index = () => {
           <span className="divider-line" />
         </div>
         <div ref={reveal} className="reveal">
-          <p>Tengo esta servilleta porque era de mi padre. Fue alumno interno en Los Salesianos de El Campillo, en Antequera. Su número era el 908.</p>
+          <p>Tengo esta servilleta porque era de mi padre. Fue alumno interno en Los Salesianos de «El Campillo», en Antequera. Su número era el 908.</p>
         </div>
         <div ref={reveal} className="reveal">
           <p>Esto es lo único que conservo de su etapa escolar: un trozo de lino con dos letras en hilo azul. La M y la R.</p>
