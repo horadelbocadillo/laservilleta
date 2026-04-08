@@ -123,7 +123,7 @@ const Index = () => {
         </button>
       </div>
       <section className="hero section">
-        <div className="hero-counter">15 de 27 letras para un alfabeto completo</div>
+        <div className="hero-counter">2 de 27 letras para un alfabeto completo</div>
         <h1 className="hero-title">
           La<br /><em>Servilleta</em>
         </h1>
