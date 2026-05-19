@@ -186,10 +186,10 @@ const Index = () => {
           <span className="divider-line" />
         </div>
         <div ref={reveal} className="reveal">
-          <p>Esta tipografía viene de Los Salesianos de «El Campillo», un internado en Málaga. Año 1952.</p>
+          <p>Esta tipografía puede que venga de un internado salesiano de Málaga. Año 1952.</p>
         </div>
         <div ref={reveal} className="reveal">
-          <p>El colegio asignaba un número a cada alumno y marcaba todo su ajuar —sábanas, toallas, servilletas— con sus iniciales y un número. No lo hacían las familias. Lo hacía el colegio.</p>
+          <p>Mi hipótesis es que el colegio asignaba un número a cada alumno y marcaba todo su ajuar —sábanas, toallas, servilletas— con sus iniciales y un número. No lo hacían las familias. Lo hacía el colegio.</p>
         </div>
         <div ref={reveal} className="reveal">
           <p className="accent">Eso significa que esta tipografía no es una pieza única. Es un diseño que se repitió cientos de veces, en cientos de piezas, con todas las letras del abecedario.</p>
@@ -204,7 +204,7 @@ const Index = () => {
           <span className="divider-line" />
         </div>
         <div ref={reveal} className="reveal">
-          <p>Tengo esta servilleta porque era de mi padre. Fue alumno interno en Los Salesianos de «El Campillo», en Málaga. Su número era el 908.</p>
+          <p>Tengo esta servilleta porque era de mi padre. Fue alumno interno de un colegio de los salesianos en la provincia de Málaga. Su número era el 908.</p>
         </div>
         <div ref={reveal} className="reveal">
           <p>Esto es lo único que conservo de su etapa escolar: un trozo de lino con dos letras en hilo azul. La M y la R.</p>
