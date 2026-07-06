@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "sdk_version": "0.20.0",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "none"
+  },
+  "mcp": {
+    "server": {
+      "name": "la-servilleta-mcp",
+      "version": "0.1.0",
+      "title": "La Servilleta"
+    },
+    "tools": [
+      {
+        "name": "get_alphabet_status",
+        "title": "Alphabet status",
+        "description": "Returns which letters of the La Servilleta alphabet have been found on real napkins, which have been deduced from the two known letters, and which are still missing.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "get_project_info",
+        "title": "About La Servilleta",
+        "description": "Returns a summary of the La Servilleta project: what it is, how to contribute a photo of an embroidered napkin, and how to contact the project owner.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
