@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    font-family: sans-serif;
+    padding: 3rem 2rem;
+  }
+  h2 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 0.5rem;
+  }
+  .intro {
+    font-size: 0.75rem;
+    color: #888;
+    max-width: 560px;
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 2.5rem 0 1.5rem;
+    text-align: center;
+  }
+  .letter-label {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    color: #1e3a56;
+    margin: 2rem 0 0.5rem;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .box { text-align: center; }
+  .box .label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  .box .sublabel {
+    font-size: 0.5rem;
+    color: #aaa;
+    margin-top: 0.25rem;
+    max-width: 200px;
+    line-height: 1.5;
+  }
+  .baseline-note {
+    font-size: 0.5rem;
+    color: #1e3a56;
+    margin-top: 0.3rem;
+  }
+</style>
+</head>
+<body>
+
+<h2>Sistema tipográfico de La Servilleta</h2>
+<p class="intro">Propuesta de las 12 letras restantes — C, F, G, H, J, K, L, S, T, X, Y, Z — deducidas a partir de la M y la R según las cinco reglas del sistema.</p>
+
+<!-- ============================================================ -->
+<div class="section-label">Grupo 1 ampliado — arco + asta</div>
+
+<!-- H -->
+<div class="letter-label">H</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="55" y1="190" x2="55" y2="30" />
+        <line x1="145" y1="190" x2="145" y2="30" />
+        <line x1="55" y1="110" x2="145" y2="110" />
+      </g>
+    </svg>
+    <div class="label">H convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Asta izquierda orgánica -->
+        <path d="M 55 192 C 54 140, 56 80, 55 30" />
+        <!-- Arco derecho desde media altura: el mismo arco de la M, desplazado -->
+        <path d="M 55 108 C 70 86, 108 80, 130 94 C 143 103, 146 120, 146 140 L 146 192" />
+      </g>
+    </svg>
+    <div class="label">H de la servilleta</div>
+    <div class="sublabel">El arco de la M sustituye la barra y el asta derecha en un solo gesto. La barra horizontal desaparece: identidad por reducción.</div>
+  </div>
+</div>
+
+<!-- Y -->
+<div class="letter-label">Y</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="55" y1="30" x2="100" y2="110" />
+        <line x1="145" y1="30" x2="100" y2="110" />
+        <line x1="100" y1="110" x2="100" y2="190" />
+      </g>
+    </svg>
+    <div class="label">Y convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Rama derecha + asta en un solo gesto continuo que rompe la base -->
+        <path d="M 145 30 C 144 70, 132 102, 104 112 C 101 145, 102 180, 101 200 C 101 210, 105 216, 112 215" />
+        <!-- Rama izquierda curva -->
+        <path d="M 55 30 C 56 72, 70 104, 100 112" />
+      </g>
+    </svg>
+    <div class="label">Y de la servilleta</div>
+    <div class="sublabel">Las diagonales se curvan en copa. La rama derecha y el asta son un único gesto que desciende bajo la base con terminal curvo, eco de la pierna de la R.</div>
+    <div class="baseline-note">↓ el asta desciende bajo la línea base</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">Grupo 2 ampliado — asta + gesto</div>
+
+<!-- K -->
+<div class="letter-label">K</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="55" y1="190" x2="55" y2="30" />
+        <line x1="145" y1="30" x2="55" y2="115" />
+        <line x1="75" y1="97" x2="145" y2="190" />
+      </g>
+    </svg>
+    <div class="label">K convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Asta orgánica -->
+        <path d="M 55 192 C 54 140, 56 80, 55 30" />
+        <!-- Brazo + pierna en un único gesto de cintura: la R con la panza abierta -->
+        <path d="M 142 33 C 112 52, 86 84, 70 110 C 92 132, 128 168, 148 202 C 153 212, 160 214, 166 209" />
+      </g>
+    </svg>
+    <div class="label">K de la servilleta</div>
+    <div class="sublabel">Es la hermana de la R: la panza se abre y queda un gesto único de cintura. La pierna desciende bajo la base con el mismo terminal curvo.</div>
+    <div class="baseline-note">↓ la pierna desciende bajo la línea base</div>
+  </div>
+</div>
+
+<!-- L -->
+<div class="letter-label">L</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="60" y1="30" x2="60" y2="190" />
+        <line x1="60" y1="190" x2="145" y2="190" />
+      </g>
+    </svg>
+    <div class="label">L convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Gesto continuo: asta orgánica con quiebro de 90° conservado pero redondeado mínimamente -->
+        <path d="M 60 30 C 59 80, 61 130, 60 176 C 60 188, 67 192, 80 192 L 142 191" />
+      </g>
+    </svg>
+    <div class="label">L de la servilleta</div>
+    <div class="sublabel">Un solo gesto continuo. El quiebro de 90° se conserva como punto de ruptura deliberado, apenas suavizado por el hilo.</div>
+  </div>
+</div>
+
+<!-- T -->
+<div class="letter-label">T</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="100" y1="30" x2="100" y2="190" />
+        <line x1="55" y1="30" x2="145" y2="30" />
+      </g>
+    </svg>
+    <div class="label">T convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Asta orgánica (la I) -->
+        <path d="M 100 190 C 99 160, 101 120, 100 80 C 99 55, 101 35, 100 32" />
+        <!-- Barra superior: el marcador horizontal en posición de tope -->
+        <path d="M 58 34 C 86 30, 116 30, 142 34" />
+      </g>
+    </svg>
+    <div class="label">T de la servilleta</div>
+    <div class="sublabel">Es la I más el marcador horizontal en posición superior. Dos trazos, identidad por adición mínima.</div>
+  </div>
+</div>
+
+<!-- F -->
+<div class="letter-label">F</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="60" y1="190" x2="60" y2="30" />
+        <line x1="60" y1="30" x2="148" y2="30" />
+        <line x1="60" y1="110" x2="128" y2="110" />
+      </g>
+    </svg>
+    <div class="label">F convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Asta que se curva arriba hacia la derecha en gesto continuo: eco del hombro de la M -->
+        <path d="M 60 190 C 59 140, 61 95, 60 58 C 60 40, 74 31, 98 30 C 116 29, 130 32, 140 37" />
+        <!-- Barra media corta: marcador de identidad -->
+        <line x1="62" y1="112" x2="110" y2="112" />
+      </g>
+    </svg>
+    <div class="label">F de la servilleta</div>
+    <div class="sublabel">El asta y la barra superior se funden en un gesto continuo curvado, eco del hombro de la M. La barra media corta es el marcador que la distingue de la L y la T.</div>
+  </div>
+</div>
+
+<!-- J -->
+<div class="letter-label">J</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <path d="M 115 30 L 115 155 C 115 185, 75 185, 65 160" />
+        <line x1="80" y1="30" x2="150" y2="30" />
+      </g>
+    </svg>
+    <div class="label">J convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Un solo gesto: asta orgánica que rompe la base y gira en gancho -->
+        <path d="M 112 30 C 113 80, 111 140, 112 178 C 112 206, 96 220, 72 213 C 64 210, 59 205, 57 198" />
+      </g>
+    </svg>
+    <div class="label">J de la servilleta</div>
+    <div class="sublabel">Un único gesto sin remate superior. El gancho rompe la línea base: descendente natural del sistema.</div>
+    <div class="baseline-note">↓ el gancho desciende bajo la línea base</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">Grupo 4 — gesto curvo abierto</div>
+
+<!-- C -->
+<div class="letter-label">C</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <path d="M 150 55 C 130 30, 70 25, 50 70 C 35 105, 35 135, 50 160 C 70 198, 130 192, 150 168" />
+      </g>
+    </svg>
+    <div class="label">C convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- El mismo arco de la E, sin barra -->
+        <path d="M 130 30 C 80 28, 42 55, 40 110 C 38 165, 78 195, 130 192" />
+      </g>
+    </svg>
+    <div class="label">C de la servilleta</div>
+    <div class="sublabel">El arco de la E sin barra. La barra central de la E pasa a leerse retroactivamente como su marcador de identidad frente a la C.</div>
+  </div>
+</div>
+
+<!-- G -->
+<div class="letter-label">G</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <path d="M 150 55 C 130 30, 70 25, 50 70 C 35 105, 35 135, 50 160 C 70 198, 130 192, 150 168 L 150 120 L 110 120" />
+      </g>
+    </svg>
+    <div class="label">G convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Mismo arco que la C, con el terminal inferior prolongado en descendente corto -->
+        <path d="M 130 30 C 80 28, 42 55, 40 110 C 38 165, 78 195, 130 192 C 142 199, 149 207, 152 214" />
+      </g>
+    </svg>
+    <div class="label">G de la servilleta</div>
+    <div class="sublabel">C cuyo terminal inferior se prolonga en un descendente corto bajo la base, eco del terminal de la R. Un solo gesto. La distinción con E y C es topológica, no posicional: C abierta, E con barra, G con cola.</div>
+    <div class="baseline-note">↓ la cola desciende bajo la línea base</div>
+  </div>
+</div>
+
+<!-- S -->
+<div class="letter-label">S</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <path d="M 145 55 C 135 32, 75 25, 60 55 C 45 85, 80 100, 100 108 C 125 118, 155 130, 145 165 C 135 195, 70 195, 55 165" />
+      </g>
+    </svg>
+    <div class="label">S convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- S orgánica de gesto único, espina alargada, panzas asimétricas -->
+        <path d="M 142 48 C 132 33, 96 27, 76 39 C 54 53, 58 82, 84 97 C 112 113, 148 128, 144 158 C 140 186, 102 196, 76 188 C 66 185, 60 179, 57 172" />
+      </g>
+    </svg>
+    <div class="label">S de la servilleta</div>
+    <div class="sublabel">Gesto único orgánico con panzas asimétricas y sobredimensionadas. No necesita marcador: su identidad es la propia espina.</div>
+  </div>
+</div>
+
+<!-- X -->
+<div class="letter-label">X</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="55" y1="30" x2="145" y2="190" />
+        <line x1="145" y1="30" x2="55" y2="190" />
+      </g>
+    </svg>
+    <div class="label">X convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Aspa curva: dos trazos curvos especulares que se cruzan en un único punto central -->
+        <path d="M 55 30 C 93 82, 107 138, 145 192" />
+        <path d="M 145 30 C 107 82, 93 138, 55 192" />
+      </g>
+    </svg>
+    <div class="label">X de la servilleta</div>
+    <div class="sublabel">Aspa curva: los dos trazos rectos se convierten en curvas especulares que conservan el cruce único central. La regla 1 se aplica al trazo, no a la topología: la X sigue siendo un cruce.</div>
+  </div>
+</div>
+
+<!-- Z -->
+<div class="letter-label">Z</div>
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#bbb" stroke-width="3.5" fill="none">
+        <line x1="55" y1="30" x2="145" y2="30" />
+        <line x1="145" y1="30" x2="55" y2="190" />
+        <line x1="55" y1="190" x2="145" y2="190" />
+      </g>
+    </svg>
+    <div class="label">Z convencional</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Gesto continuo: barras horizontales conservadas, diagonal convertida en curva -->
+        <path d="M 56 35 C 86 31, 118 31, 144 34 C 117 76, 84 132, 58 184 C 88 192, 123 192, 146 187" />
+      </g>
+    </svg>
+    <div class="label">Z de la servilleta</div>
+    <div class="sublabel">Gesto continuo: las horizontales se conservan, la diagonal central se convierte en curva. Los ángulos agudos quedan suavizados por el trazo del hilo.</div>
+  </div>
+</div>
+
+</body>
+</html>

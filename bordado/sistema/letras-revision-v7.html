@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Servilleta — Sistema tipográfico · revisión 7 · grupo 1 y D abierta</title>
+<!--
+  REVISIÓN 7 — cerrada el 6 de julio de 2026 · Grupo 1 (M, N, Ñ, A, W, V) + D abierta
+
+  Decisiones de Guiomar (3 y 6 de julio de 2026), según su hoja de referencia
+  del grupo 1 (arco + asta):
+  - N: la M canónica sin el asta corta interior. Hereda el arranque bajo el
+    renglón y el ángulo recto.
+  - Ñ: la N más el asta retirada, tumbada en horizontal sobre la letra,
+    CORTA (recortada por indicación suya el 6/7), sobresaliendo de la altura
+    de capitales.
+  - A: pertenece al grupo 1 — es la N más la barra horizontal. Se retira la
+    A curva anterior (sistema-tipografico.html).
+  - V: la forma del grupo con el arco abajo: gesto curvo que baja por la
+    izquierda, arco inferior que rompe levemente la base, y ángulo en la
+    esquina inferior derecha donde nace el asta. Se retiró la V curva
+    anterior (era una U).
+  - W: la V más el asta corta interior (la misma relación que M/N).
+  - D: se recupera la D ABIERTA de letras-revision-v4.html (la panza no
+    retorna al asta), con el asta anclada a la base según la regla 04 vigente.
+  Nota: la idea previa de una V con vértice de ~30° queda descartada por la
+  hoja de referencia del grupo; si se quiere retomar, se revisa aparte.
+-->
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+    font-family: sans-serif;
+    padding: 3rem 2rem;
+  }
+  h2 {
+    font-family: Georgia, serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 0.5rem;
+  }
+  .intro {
+    font-size: 0.75rem;
+    color: #888;
+    max-width: 560px;
+    text-align: center;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .intro strong { color: #1e3a56; font-weight: 600; }
+  .section-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #999;
+    margin: 2.5rem 0 1.5rem;
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .box { text-align: center; }
+  .box .label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  .box .sublabel {
+    font-size: 0.5rem;
+    color: #aaa;
+    margin-top: 0.25rem;
+    max-width: 200px;
+    line-height: 1.5;
+  }
+  .baseline-note {
+    font-size: 0.5rem;
+    color: #1e3a56;
+    margin-top: 0.3rem;
+  }
+  .estado {
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+    font-weight: 700;
+  }
+  .decidida { color: #1e3a56; }
+  .retirada { color: #c99; }
+</style>
+</head>
+<body>
+
+<h2>Revisión 7 — Grupo 1 (arco + asta) y la D abierta</h2>
+<p class="intro">
+  Aplicando tu hoja de referencia del grupo 1: <strong>M · N · Ñ · A · W · V</strong>,
+  todas construidas con el arco, el asta y el ángulo de la M canónica. Además se recupera
+  la <strong>D abierta</strong> de la revisión 4, que se había perdido al tomar la v5 como base.
+  Todo lo de esta hoja está aplicado en la revisión 6 y en el abecedario para Lovable.
+</p>
+
+<!-- ============================================================ -->
+<div class="section-label">M — conocida · la guía del grupo</div>
+
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <path d="M 35 210 C 22 160, 18 90, 30 50 C 45 12, 90 2, 140 8" />
+        <line x1="140" y1="8" x2="140" y2="190" />
+        <line x1="115" y1="40" x2="115" y2="145" />
+      </g>
+    </svg>
+    <div class="label">M canónica</div>
+    <div class="sublabel">Arco continuo con arranque bajo el renglón, ángulo recto en la unión con el asta derecha, y asta corta interior como marcador.</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">N — la M sin el asta interior</div>
+
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <path d="M 35 210 C 22 160, 18 90, 30 50 C 45 12, 90 2, 140 8" />
+        <line x1="140" y1="8" x2="140" y2="190" />
+      </g>
+    </svg>
+    <div class="label">N — deducida</div>
+    <div class="sublabel">Réplica exacta de la M canónica sin el asta corta interior. Hereda el arranque bajo el renglón y el ángulo recto (reglas 03 y 04).</div>
+    <div class="estado decidida">Decidida 3/7/2026</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">Ñ — la N más la virgulilla corta</div>
+
+<div class="row">
+  <div class="box">
+    <svg width="200" height="252" viewBox="0 -40 200 280" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <line x1="15" y1="8" x2="185" y2="8" stroke="#f5e9e9" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <path d="M 35 210 C 22 160, 18 90, 30 50 C 45 12, 90 2, 140 8" />
+        <line x1="140" y1="8" x2="140" y2="190" />
+        <!-- Virgulilla: el asta retirada de la N, tumbada en horizontal,
+             CORTA (recortada el 6/7/2026), sobre la letra y por encima
+             de la altura de capitales (línea rosada). -->
+        <line x1="75" y1="-18" x2="115" y2="-18" />
+      </g>
+    </svg>
+    <div class="label">Ñ — deducida</div>
+    <div class="sublabel">La N más el asta retirada, tumbada en horizontal y recortada, sobresaliendo por encima de la altura de capitales (línea rosada).</div>
+    <div class="baseline-note">↑ la virgulilla sobresale de la altura de capitales</div>
+    <div class="estado decidida">Decidida 6/7/2026</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">A — pertenece al grupo 1: la N más la barra</div>
+
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#c9a3a3" stroke-width="3.5" fill="none">
+        <path d="M 40 190 C 25 140, 25 80, 40 50 C 55 20, 90 10, 120 15 C 145 19, 155 35, 155 50 L 155 190" />
+        <line x1="60" y1="130" x2="150" y2="130" />
+      </g>
+    </svg>
+    <div class="label">A anterior — se retira</div>
+    <div class="sublabel">Construida sobre el gesto curvo antiguo, sin el ángulo recto ni el arranque de la M.</div>
+    <div class="estado retirada">Retirada</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <path d="M 35 210 C 22 160, 18 90, 30 50 C 45 12, 90 2, 140 8" />
+        <line x1="140" y1="8" x2="140" y2="190" />
+        <!-- Barra horizontal hasta el asta. AJUSTABLE: altura y arranque izquierdo. -->
+        <line x1="60" y1="125" x2="140" y2="125" />
+      </g>
+    </svg>
+    <div class="label">A — deducida</div>
+    <div class="sublabel">La N más la barra horizontal que llega hasta el asta. Hereda el arranque bajo el renglón y el ángulo recto del grupo.</div>
+    <div class="estado decidida">Decidida 6/7/2026</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">V — el grupo con el arco abajo</div>
+
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#c9a3a3" stroke-width="3.5" fill="none">
+        <path d="M 40 30 C 35 80, 35 140, 55 170 C 75 200, 125 200, 145 170 C 165 140, 165 80, 160 30" />
+      </g>
+    </svg>
+    <div class="label">V curva anterior — retirada</div>
+    <div class="sublabel">Era una forma de U, no una V.</div>
+    <div class="estado retirada">Retirada 3/7/2026</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- El gesto del grupo con el arco abajo: baja por la izquierda,
+             arco inferior que rompe levemente la base, ángulo en la esquina
+             inferior derecha donde nace el asta. -->
+        <path d="M 38 18 C 24 55, 18 115, 30 152 C 45 189, 90 198, 140 192" />
+        <line x1="140" y1="192" x2="140" y2="10" />
+      </g>
+    </svg>
+    <div class="label">V — deducida</div>
+    <div class="sublabel">La lógica del grupo con el arco abajo: el gesto baja por la izquierda, el arco inferior rompe levemente la base y el ángulo queda en la esquina inferior derecha, donde nace el asta.</div>
+    <div class="baseline-note">↓ el arco inferior rompe levemente la línea base</div>
+    <div class="estado decidida">Decidida 6/7/2026</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">W — la V más el asta interior</div>
+
+<div class="row">
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#c9a3a3" stroke-width="3.5" fill="none">
+        <path d="M 40 30 C 35 80, 35 140, 55 170 C 75 200, 125 200, 145 170 C 165 140, 165 80, 160 30" />
+        <line x1="100" y1="70" x2="100" y2="160" />
+      </g>
+    </svg>
+    <div class="label">W anterior — retirada</div>
+    <div class="sublabel">Construida sobre la V curva retirada.</div>
+    <div class="estado retirada">Retirada 3/7/2026</div>
+  </div>
+  <div class="box">
+    <svg width="200" height="220" viewBox="0 0 200 240" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="15" y1="190" x2="185" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <path d="M 38 18 C 24 55, 18 115, 30 152 C 45 189, 90 198, 140 192" />
+        <line x1="140" y1="192" x2="140" y2="10" />
+        <!-- Marcador: asta corta interior, como en la M (regla 03). -->
+        <line x1="115" y1="55" x2="115" y2="160" />
+      </g>
+    </svg>
+    <div class="label">W — deducida</div>
+    <div class="sublabel">La V más el asta corta interior: la misma relación que hay entre la M y la N (identidad por reducción, regla 03).</div>
+    <div class="baseline-note">↓ el arco inferior rompe levemente la línea base</div>
+    <div class="estado decidida">Decidida 6/7/2026</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">D — se recupera la forma abierta de la v4</div>
+
+<div class="row">
+  <div class="box">
+    <svg width="180" height="220" viewBox="0 0 200 260" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="20" y1="190" x2="180" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#c9a3a3" stroke-width="3.5" fill="none">
+        <line x1="55" y1="190" x2="55" y2="30" />
+        <path d="M 55 30 C 55 25, 170 20, 170 110 C 170 200, 55 192, 55 190" />
+      </g>
+    </svg>
+    <div class="label">D cerrada (v5) — se retira</div>
+    <div class="sublabel">Al tomar la v5 como base se perdió la apertura decidida en la v4.</div>
+    <div class="estado retirada">Retirada</div>
+  </div>
+  <div class="box">
+    <svg width="180" height="220" viewBox="0 0 200 260" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="20" y1="190" x2="180" y2="190" stroke="#eee" stroke-width="1" stroke-dasharray="4,4" />
+      <g stroke="#1e3a56" stroke-width="3.5" fill="none">
+        <!-- Asta anclada a la base (regla 04 vigente) -->
+        <line x1="55" y1="190" x2="55" y2="30" />
+        <!-- Panza abierta de la v4, sin modificar: no retorna al asta -->
+        <path d="M 55 30 C 55 25, 170 20, 170 110 C 170 194, 92 196, 70 178" />
+      </g>
+    </svg>
+    <div class="label">D — deducida · abierta</div>
+    <div class="sublabel">Asta anclada + panza sobredimensionada a toda la altura, abierta: el retorno inferior termina antes de tocar el asta (panza de la v4, sin modificar; el asta ancla según la regla 04 vigente).</div>
+    <div class="estado decidida">Recuperada 6/7/2026</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<div class="section-label">Estado tras esta revisión</div>
+
+<p class="intro">
+  <strong>Grupo 1 cerrado:</strong> M (conocida), N, Ñ, A, W, V (deducidas), todas construidas
+  con el arco, el asta y el ángulo de la M canónica. <strong>D abierta recuperada.</strong>
+  Todo aplicado en la revisión 6 y en el abecedario para Lovable.<br><br>
+  <strong>Nota:</strong> la idea anterior de una V con vértice de ~30° queda descartada por tu
+  hoja de referencia del grupo; si quieres retomarla, la revisamos aparte.<br><br>
+  <strong>Siguiente de la cola:</strong> revisión de las vocales restantes — E, I, O, U.
+</p>
+
+</body>
+</html>
