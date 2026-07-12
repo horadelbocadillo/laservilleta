@@ -2,7 +2,7 @@ import { defineTool } from "@lovable.dev/mcp-js";
 
 const LETTERS = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".split("");
 const FOUND = ["M", "R"];
-const DEDUCED = ["A", "B", "D", "E", "I", "N", "Ñ", "O", "P", "Q", "U", "V", "W"];
+const DEDUCED = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "N", "Ñ", "O", "P", "Q", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 export default defineTool({
   name: "get_alphabet_status",

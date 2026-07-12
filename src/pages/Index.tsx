@@ -4,7 +4,7 @@ import napkinHero from "@/assets/napkin-hero.jpg";
 
 const LETTERS = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
 const FOUND = new Set(['M', 'R']);
-const DEDUCED = new Set(['A', 'B', 'D', 'E', 'I', 'N', 'Ñ', 'O', 'P', 'Q', 'U', 'V', 'W']);
+const DEDUCED = new Set(LETTERS.filter((letter) => !FOUND.has(letter)));
 
 const Index = () => {
   const revealRefs = useRef<(HTMLElement | null)[]>([]);
@@ -237,7 +237,7 @@ const Index = () => {
       {/* ABECEDARIO */}
       <section ref={reveal} className="alphabet-section section reveal">
         <h2>El abecedario</h2>
-        <p className="subtitle">Letras encontradas, deducidas y por encontrar</p>
+        <p className="subtitle">2 encontradas, 25 deducidas — cada pieza real que aparezca las confirmará o las corregirá</p>
         <div className="alphabet-grid">
           {LETTERS.map((letter) => (
             <div
@@ -309,10 +309,10 @@ const Index = () => {
         </div>
         <h2 ref={reveal} className="reveal">El laboratorio</h2>
         <p className="subtitle" ref={reveal}>Hipótesis tipográficas a partir de dos letras reales</p>
-        <p className="intro" ref={reveal}>Solo tengo dos letras reales: la M y la R. Pero aplicando las reglas del sistema he empezado a deducir cómo serían las demás. Estas son hipótesis — las letras que el sistema produciría si sigue su propia lógica. Cada vez que alguien me envíe una letra real, podré confirmar o corregir estas deducciones.</p>
+        <p className="intro" ref={reveal}>Solo tengo dos letras reales: la M y la R. Aplicando las reglas del sistema he deducido las 25 restantes: el abecedario está completo como hipótesis — las letras que el sistema produce cuando sigue su propia lógica. Cada vez que alguien me envíe una letra real, podré confirmar o corregir estas deducciones.</p>
 
         {/* Grupo 1 — Estructura de arco + asta */}
-        <div className="grupo-label" ref={reveal}>Grupo 1 — Arco + asta: M · N · Ñ · A · W · V</div>
+        <div className="grupo-label" ref={reveal}>Grupo 1 — Arco + asta: M · N · Ñ · A · W · V · Y</div>
         <div className="grupo" ref={reveal} style={{ overflowX: "auto" }}>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -323,6 +323,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">M</div>
             <div className="letra-estado estado-conocida">Conocida</div>
+            <div className="letra-nota">Gesto continuo que arranca bajo el renglón; el asta corta interior la distingue de la N.</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -332,6 +333,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">N</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La M sin el asta corta interior: la reducción mínima que la distingue (regla 03).</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -342,6 +344,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">Ñ</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La N más la virgulilla horizontal sobre capitales.</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -352,6 +355,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">A</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La N más la barra horizontal, su marcador de identidad (regla 03).</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -362,6 +366,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">W</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La V más el asta corta interior, como la M respecto a la N.</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -371,11 +376,22 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">V</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">El gesto del grupo con el arco abajo y el ángulo en la esquina inferior derecha.</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 145 30 C 144 70, 132 102, 104 112 C 101 145, 102 180, 101 200 C 101 210, 105 216, 112 215" fill="none" />
+              <path d="M 55 30 C 56 72, 70 104, 100 112" fill="none" />
+            </svg>
+            <div className="letra-nombre">Y</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Diagonales curvadas en copa; el asta baja bajo la base con el terminal de la R (reglas 01 y 04).</div>
           </div>
         </div>
 
         {/* Grupo 2 — Estructura de asta + panza */}
-        <div className="grupo-label" ref={reveal}>Grupo 2 — Asta + panza: R · P · B · D</div>
+        <div className="grupo-label" ref={reveal}>Grupo 2 — Asta + panza, familia de la R: R · P · B · D · K · J</div>
         <div className="grupo" ref={reveal}>
           <div className="letra-card">
             <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -386,6 +402,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">R</div>
             <div className="letra-estado estado-conocida">Conocida</div>
+            <div className="letra-nota">Asta anclada, panza al tercio inferior y pierna que desciende bajo la línea (regla 04).</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -395,6 +412,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">P</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La R sin la pierna: panza sobredimensionada hasta el tercio inferior (regla 05).</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -405,6 +423,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">B</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Asta anclada y doble panza sobredimensionada (regla 05).</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -414,11 +433,146 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">D</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Panza sobredimensionada a toda la altura (regla 05).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 55 192 C 54 140, 56 80, 55 30" fill="none" />
+              <path d="M 142 33 C 112 52, 86 84, 70 110 C 92 132, 128 168, 148 202 C 153 212, 160 214, 166 209" fill="none" />
+            </svg>
+            <div className="letra-nombre">K</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Panza abierta en cintura y pierna con terminal curvo, herencia de la R (regla 04).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 112 30 C 113 80, 111 140, 112 178 C 112 206, 96 220, 72 213 C 64 210, 59 205, 57 198" fill="none" />
+            </svg>
+            <div className="letra-nombre">J</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Un único gesto sin remate superior; el gancho baja bajo la base (reglas 02 y 04).</div>
           </div>
         </div>
 
-        {/* Grupo 3 — Vocales */}
-        <div className="grupo-label" ref={reveal}>Grupo 3 — Vocales: O · Q · U · I · E</div>
+        {/* Grupo 3 — Astas ancladas */}
+        <div className="grupo-label" ref={reveal}>Grupo 3 — Astas ancladas: I · T · H · F · L</div>
+        <div className="grupo" ref={reveal}>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <path d="M 100 195 C 99 155, 101 115, 100 80 C 99 55, 101 35, 100 25" fill="none" />
+            </svg>
+            <div className="letra-nombre">I</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Asta orgánica desnuda: cualquier añadido la convertiría en otra letra (regla 03).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 100 190 C 99 160, 101 120, 100 80 C 99 55, 101 35, 100 34" fill="none" />
+              <path d="M 58 36 C 86 32, 116 32, 142 36" fill="none" />
+            </svg>
+            <div className="letra-nombre">T</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La I más el marcador horizontal superior (regla 03).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 55 192 C 54 140, 56 80, 55 30" fill="none" />
+              <path d="M 145 192 C 144 140, 146 80, 145 30" fill="none" />
+              <path d="M 57 111 C 86 108, 115 108, 143 111" fill="none" />
+            </svg>
+            <div className="letra-nombre">H</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Dos astas orgánicas unidas por el marcador horizontal (regla 01).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 60 190 C 59 140, 61 95, 60 58 C 60 40, 74 31, 98 30 C 116 29, 130 32, 140 37" fill="none" />
+              <line x1="62" y1="112" x2="110" y2="112" />
+            </svg>
+            <div className="letra-nombre">F</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Asta y barra superior fundidas en un gesto; la barra media es su marcador (reglas 02 y 03).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 60 30 C 59 80, 61 130, 60 176 C 60 188, 67 192, 80 192 L 142 191" fill="none" />
+            </svg>
+            <div className="letra-nombre">L</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Un solo gesto continuo con el quiebro de 90° como ruptura deliberada (reglas 01 y 02).</div>
+          </div>
+        </div>
+
+        {/* Grupo 4 — Gesto curvo abierto */}
+        <div className="grupo-label" ref={reveal}>Grupo 4 — Gesto curvo abierto: C · E · G · S · X · Z</div>
+        <div className="grupo" ref={reveal}>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 130 30 C 80 28, 42 55, 40 110 C 38 165, 78 195, 130 192" fill="none" />
+            </svg>
+            <div className="letra-nombre">C</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">El arco de la E sin barra: la barra es lo que las distingue (regla 03).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 130 30 C 80 28, 42 55, 40 110 C 38 165, 78 195, 130 192" fill="none" />
+              <line x1="60" y1="112" x2="100" y2="112" />
+            </svg>
+            <div className="letra-nombre">E</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La C más la barra corta a media altura, su marcador de identidad (regla 03).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 130 30 C 80 28, 42 55, 40 110 C 38 165, 78 195, 130 192" fill="none" />
+              <line x1="131" y1="160" x2="94" y2="160" />
+            </svg>
+            <div className="letra-nombre">G</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La C más el marcador en el tercio inferior, la cota de la panza de la R (regla 05).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 142 48 C 132 33, 96 27, 76 39 C 54 53, 58 82, 84 97 C 112 113, 148 128, 144 158 C 140 186, 102 196, 76 188 C 66 185, 60 179, 57 172" fill="none" />
+            </svg>
+            <div className="letra-nombre">S</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Gesto único con panzas asimétricas sobredimensionadas (reglas 02 y 05).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 50 30 C 96 70, 96 150, 50 192" fill="none" />
+              <path d="M 150 30 C 104 70, 104 150, 150 192" fill="none" />
+            </svg>
+            <div className="letra-nombre">X</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Las dos diagonales se vuelven dos arcos enfrentados, tangentes en el centro (regla 01).</div>
+          </div>
+          <div className="letra-card">
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 56 35 C 86 31, 118 31, 144 34 C 117 76, 84 132, 58 184 C 88 192, 123 192, 146 187" fill="none" />
+            </svg>
+            <div className="letra-nombre">Z</div>
+            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Las horizontales se conservan; la diagonal central se curva (regla 01).</div>
+          </div>
+        </div>
+
+        {/* Grupo 5 — Gesto cerrado */}
+        <div className="grupo-label" ref={reveal}>Grupo 5 — Gesto cerrado: O · U · Q</div>
         <div className="grupo" ref={reveal}>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -426,14 +580,7 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">O</div>
             <div className="letra-estado estado-deducida">Deducida</div>
-          </div>
-          <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
-              <path d="M 98 28 C 55 24, 38 60, 40 108 C 42 155, 58 192, 102 189 C 145 186, 162 152, 160 106 C 158 60, 142 26, 102 28" fill="none" />
-              <line x1="82" y1="202" x2="120" y2="202" />
-            </svg>
-            <div className="letra-nombre">Q</div>
-            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Cerrada, en un gesto continuo. Con apoyo real: el 0 del número 908.</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
@@ -441,21 +588,17 @@ const Index = () => {
             </svg>
             <div className="letra-nombre">U</div>
             <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">Cuenco continuo de trazado propio (regla 02).</div>
           </div>
           <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
-              <path d="M 100 195 C 99 155, 101 115, 100 80 C 99 55, 101 35, 100 25" fill="none" />
+            <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
+              <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
+              <path d="M 98 32 C 55 28, 38 65, 40 110 C 42 155, 58 195, 102 192 C 145 189, 162 155, 160 108 C 158 62, 142 30, 102 32" fill="none" />
+              <path d="M 122 168 C 136 184, 148 199, 158 212 C 164 220, 172 221, 177 215" fill="none" />
             </svg>
-            <div className="letra-nombre">I</div>
+            <div className="letra-nombre">Q</div>
             <div className="letra-estado estado-deducida">Deducida</div>
-          </div>
-          <div className="letra-card">
-            <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
-              <path d="M 145 30 C 95 26, 42 55, 40 108 C 38 162, 92 195, 145 190" fill="none" />
-              <line x1="58" y1="110" x2="105" y2="110" />
-            </svg>
-            <div className="letra-nombre">E</div>
-            <div className="letra-estado estado-deducida">Deducida</div>
+            <div className="letra-nota">La O más la cola que cruza la panza y baja bajo la base con el terminal de la R (regla 04).</div>
           </div>
         </div>
 
