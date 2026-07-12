@@ -404,6 +404,7 @@ body {
 .grupo {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   gap: 1.5rem;
   flex-wrap: wrap;
   margin-bottom: 2.5rem;
@@ -436,6 +437,14 @@ body {
 
 .estado-conocida { color: var(--blue); }
 .estado-deducida { color: var(--gray-faint); }
+
+.letra-nota {
+  font-size: 0.62rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--gray-light);
+  margin-top: 0.4rem;
+}
 
 .laboratorio-cta {
   text-align: center;
