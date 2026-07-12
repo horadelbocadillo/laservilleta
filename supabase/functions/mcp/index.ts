@@ -3,10 +3,10 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 
 // src/lib/mcp/tools/get-alphabet-status.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 var LETTERS = "ABCDEFGHIJKLMN\xD1OPQRSTUVWXYZ".split("");
 var FOUND = ["M", "R"];
 var DEDUCED = ["A", "B", "D", "E", "I", "N", "\xD1", "O", "P", "Q", "U", "V", "W"];
@@ -35,7 +35,7 @@ var get_alphabet_status_default = defineTool({
 });
 
 // src/lib/mcp/tools/get-project-info.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.0";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.20.1";
 var PROJECT_INFO = {
   name: "La Servilleta",
   url: "https://laservilleta.lovable.app",
@@ -67,5 +67,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.0/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.20.1/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
