@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Servilleta — 2 letras de 27 para un alfabeto completo</title>
+<meta name="description" content="Unas iniciales bordadas en una servilleta con una tipografía diferente a cualquier fuente conocida. Solo tengo dos letras. Busco las 25 que faltan.">
+<meta property="og:title" content="La Servilleta — 2 letras de 27 para un alfabeto completo">
+<meta property="og:description" content="Una tipografía desconocida de un internado de los años 50. Solo tengo 2 letras de 27. Ayúdame a encontrar el resto para crear una fuente libre.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root { --white:#ffffff;--black:#111111;--gray:#444444;--gray-light:#666666;--gray-faint:#aaaaaa;--blue:#1e3a56;--blue-light:#5a82a6;--border:#dddddd; }
+  * { margin:0;padding:0;box-sizing:border-box; }
+  html { scroll-behavior:smooth;font-size:18px; }
+  body { font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black);overflow-x:hidden;-webkit-font-smoothing:antialiased; }
+  .section { position:relative; }
+  .hero { min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2rem;text-align:center; }
+  .hero-counter { font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray-light);margin-bottom:2rem;opacity:0;animation:fadeUp 1s ease 0.3s forwards; }
+  .hero-title { font-family:'Playfair Display',serif;font-size:clamp(2.8rem,8vw,6rem);font-weight:400;line-height:1.05;color:var(--black);margin-bottom:1.5rem;opacity:0;animation:fadeUp 1s ease 0.6s forwards; }
+  .hero-title em { font-style:italic;color:var(--blue); }
+  .hero-subtitle { font-weight:300;font-size:clamp(1rem,2.5vw,1.2rem);color:var(--gray);max-width:520px;line-height:1.7;opacity:0;animation:fadeUp 1s ease 0.9s forwards; }
+  .hero-scroll { position:absolute;bottom:2rem;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gray-light);opacity:0;animation:fadeUp 1s ease 1.5s forwards; }
+  .hero-scroll::after { content:'';display:block;width:1px;height:40px;background:var(--gray-faint);margin:0.75rem auto 0;animation:pulse 2s ease infinite; }
+  .story { max-width:600px;margin:0 auto;padding:4rem 2rem; }
+  .story p { font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.5vw,1.3rem);line-height:1.8;margin-bottom:1.75rem;color:var(--black); }
+  .story p.accent { color:var(--blue);font-style:italic; }
+  .divider { display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:2rem 0;max-width:250px;margin:0 auto; }
+  .divider-line { flex:1;height:1px;background:var(--border); }
+  .divider-symbol { font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--blue);letter-spacing:0.25em; }
+  .typo-section { padding:6rem 2rem 4rem;max-width:700px;margin:0 auto; }
+  .typo-section h2 { font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--black);margin-bottom:2rem;text-align:center; }
+  .typo-compare { display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:2rem; }
+  .typo-box { text-align:center;padding:2.5rem 1rem;border:1px solid var(--border); }
+  .typo-box .label { font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray-light); }
+  .typo-box-custom { text-align:center;padding:2.5rem 1rem;border:2px solid var(--blue);background:#f5f8fb; }
+  .typo-box-custom .label { font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--blue); }
+  .typo-explain { font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:300;color:var(--gray);line-height:1.8;text-align:center;max-width:520px;margin:1.5rem auto 0; }
+  .typo-explain.highlight { font-family:'Playfair Display',serif;font-style:italic;font-size:1.15rem;color:var(--blue);margin-top:2rem; }
+  .alphabet-section { padding:4rem 2rem;text-align:center; }
+  .alphabet-section h2 { font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--black);margin-bottom:0.5rem; }
+  .alphabet-section .subtitle { font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray-light);margin-bottom:3rem; }
+  .alphabet-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(50px,1fr));gap:6px;max-width:540px;margin:0 auto; }
+  .letter-cell { aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-size:1.2rem;border:1px solid var(--border);color:var(--gray-faint);background:var(--white);transition:all 0.3s ease; }
+  .letter-cell.found { background:var(--blue);color:var(--white);border-color:var(--blue);font-weight:700; }
+  .letter-cell.deduced { background:#e8eff5;color:var(--blue);border-color:var(--blue-light); }
+  .letter-cell.missing { border-style:dashed;border-color:var(--gray-faint); }
+  .letter-cell.missing:hover { border-color:var(--blue-light);color:var(--blue-light); }
+  .cta-section { padding:5rem 2rem;text-align:center;max-width:600px;margin:0 auto; }
+  .cta-section h2 { font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(1.3rem,3.5vw,1.8rem);color:var(--black);margin-bottom:1.5rem; }
+  .cta-section p { font-family:'DM Sans',sans-serif;font-weight:300;font-size:1rem;color:var(--gray);line-height:1.7;margin-bottom:1rem; }
+  .cta-actions { display:flex;flex-direction:column;gap:1rem;align-items:center;margin-top:2.5rem; }
+  .cta-primary { display:inline-flex;align-items:center;font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.95rem;padding:1rem 2.5rem;background:var(--blue);color:var(--white);border:none;text-decoration:none;letter-spacing:0.03em;transition:all 0.3s ease;cursor:pointer; }
+  .cta-primary:hover { background:var(--black);transform:translateY(-1px);box-shadow:0 4px 20px rgba(0,0,0,0.12); }
+  .cta-email { display:inline-flex;align-items:center;font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.95rem;padding:1rem 2.5rem;background:var(--white);color:var(--blue);border:2px solid var(--blue);text-decoration:none;letter-spacing:0.03em;transition:all 0.3s ease;cursor:pointer; }
+  .cta-email:hover { background:#f5f8fb;transform:translateY(-1px); }
+  .cta-secondary { font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.15em;color:var(--gray-light);text-decoration:none;border-bottom:1px solid var(--border);padding-bottom:2px;transition:all 0.3s ease; }
+  .cta-secondary:hover { color:var(--blue);border-color:var(--blue); }
+  .goal-section { padding:4rem 2rem 5rem;text-align:center;max-width:600px;margin:0 auto; }
+  .goal-section .label { font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gray-light);margin-bottom:1.5rem; }
+  .goal-section p { font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2.5vw,1.3rem);line-height:1.8;color:var(--black); }
+  .goal-section p em { color:var(--blue);font-style:italic; }
+  .sistema { max-width:640px;margin:0 auto;padding:4rem 2rem; }
+  .sistema h2 { font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--black);text-align:center;margin-bottom:2.5rem; }
+  .regla { margin-bottom:2rem;padding-left:1.5rem;border-left:2px solid var(--blue); }
+  .regla-numero { font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.25em;color:var(--blue);text-transform:uppercase;margin-bottom:0.4rem; }
+  .regla-titulo { font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--black);margin-bottom:0.5rem;line-height:1.4; }
+  .regla-texto { font-family:'DM Sans',sans-serif;font-size:0.9rem;font-weight:300;color:var(--gray);line-height:1.7; }
+  .laboratorio { max-width:800px;margin:0 auto;padding:4rem 2rem; }
+  .laboratorio h2 { font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(1.4rem,3.5vw,2rem);color:var(--black);text-align:center;margin-bottom:0.5rem; }
+  .laboratorio .subtitle { font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray-light);text-align:center;margin-bottom:1.5rem; }
+  .laboratorio .intro { font-family:'DM Sans',sans-serif;font-size:0.95rem;font-weight:300;color:var(--gray);line-height:1.7;text-align:center;max-width:560px;margin:0 auto 3rem; }
+  .grupo-label { font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray-faint);text-align:center;margin-bottom:1.5rem;margin-top:2rem; }
+  .grupo { display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:2.5rem; }
+  .letra-card { text-align:center;width:140px; }
+  .letra-card svg { display:block;margin:0 auto; }
+  .letra-nombre { font-family:'Playfair Display',serif;font-size:0.9rem;color:var(--black);margin-top:0.4rem; }
+  .letra-estado { font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.2rem; }
+  .estado-conocida { color:var(--blue); }
+  .estado-deducida { color:var(--gray-faint); }
+  .laboratorio-cta { text-align:center;margin-top:2rem;font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--blue); }
+  footer { padding:3rem 2rem;text-align:center;border-top:1px solid var(--border); }
+  footer p { font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.2em;color:var(--gray-light); }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)} }
+  @keyframes pulse { 0%,100%{opacity:0.3}50%{opacity:1} }
+  .reveal { opacity:0;transform:translateY(25px);transition:opacity 0.8s ease,transform 0.8s ease; }
+  .reveal.visible { opacity:1;transform:translateY(0); }
+  @media(max-width:480px) { html{font-size:16px} .typo-compare{gap:1rem} .alphabet-grid{grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:5px} .letter-cell{font-size:1rem} .grupo{gap:1rem} .letra-card{width:110px} }
+</style>
+</head>
+<body>
+
+<section class="hero section">
+  <div class="hero-counter">2 de 27 letras para un alfabeto completo</div>
+  <h1 class="hero-title">La<br><em>Servilleta</em></h1>
+  <p class="hero-subtitle">Unas iniciales bordadas en una servilleta con una tipografía diferente a cualquier fuente conocida. Solo tengo dos letras. Busco las 25 que faltan.</p>
+  <div class="hero-scroll">La letra</div>
+</section>
+
+<section class="typo-section section">
+  <h2 class="reveal">Esta no es una M cualquiera</h2>
+  <div class="typo-compare reveal">
+    <div class="typo-box">
+      <svg width="100%" viewBox="0 0 200 240" fill="none" stroke="#111" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="max-width:160px;margin:0 auto 1rem;display:block;">
+        <line x1="40" y1="200" x2="40" y2="30"/><line x1="40" y1="30" x2="100" y2="120"/><line x1="100" y1="120" x2="160" y2="30"/><line x1="160" y1="30" x2="160" y2="200"/>
+      </svg>
+      <div class="label">M convencional</div>
+    </div>
+    <div class="typo-box-custom">
+      <svg width="100%" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" style="max-width:160px;margin:0 auto 1rem;display:block;">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <path d="M 35 220 C 22 170, 18 100, 30 60 C 45 22, 90 12, 140 18" fill="none"/>
+        <line x1="140" y1="18" x2="140" y2="200"/>
+        <line x1="115" y1="50" x2="115" y2="155"/>
+      </svg>
+      <div class="label">M de la servilleta</div>
+    </div>
+  </div>
+  <p class="typo-explain reveal">Una M estándar se traza con dos verticales y dos diagonales formando una V central. Cuatro trazos rectos. Ninguna curva.</p>
+  <p class="typo-explain highlight reveal">Pero esta M es curva.</p>
+  <p class="typo-explain reveal">No sigue ninguna caligrafía escolar ni ninguna tipografía conocida. Alguien diseñó un sistema de letras con reglas propias y yo quiero encontrar más para completar el abecedario.</p>
+</section>
+
+<section class="story section">
+  <div class="divider reveal"><span class="divider-line"></span><span class="divider-symbol">ORIGEN</span><span class="divider-line"></span></div>
+  <div class="reveal"><p>Esta tipografía viene de Los Salesianos de El Campillo, un internado en Antequera, Málaga. Año 1952.</p></div>
+  <div class="reveal"><p>El colegio asignaba un número a cada alumno y marcaba todo su ajuar —sábanas, toallas, servilletas— con sus iniciales y un número. No lo hacían las familias. Lo hacía el colegio.</p></div>
+  <div class="reveal"><p class="accent">Eso significa que esta tipografía no es una pieza única. Es un diseño que se repitió cientos de veces, en cientos de piezas, con todas las letras del abecedario.</p></div>
+</section>
+
+<section class="story section">
+  <div class="divider reveal"><span class="divider-line"></span><span class="divider-symbol">MR</span><span class="divider-line"></span></div>
+  <div class="reveal"><p>Tengo esta servilleta porque era de mi padre. Fue alumno interno en Los Salesianos de El Campillo, en Antequera. Su número era el 908.</p></div>
+  <div class="reveal"><p>Esto es lo único que conservo de su etapa escolar: un trozo de lino con dos letras en hilo azul. La M y la R.</p></div>
+  <div class="reveal"><p>Si él era el 908, hubo al menos 907 antes. Cada uno con su ajuar marcado con esta misma tipografía, con sus propias iniciales. Esas piezas están en algún sitio.</p></div>
+</section>
+
+<section class="alphabet-section section reveal">
+  <h2>El abecedario</h2>
+  <p class="subtitle">Letras encontradas, deducidas y por encontrar</p>
+  <div class="alphabet-grid" id="alphabetGrid"></div>
+</section>
+
+<section class="sistema">
+  <div class="divider reveal"><span class="divider-line"></span><span class="divider-symbol">LAS REGLAS</span><span class="divider-line"></span></div>
+  <h2 class="reveal">El sistema</h2>
+  <div class="reveal"><div class="regla"><div class="regla-numero">Regla 01</div><div class="regla-titulo">La curva sustituye al ángulo, pero no a todos.</div><div class="regla-texto">Donde una letra convencional usa trazos rectos que se encuentran en ángulos diagonales, esta tipografía los reemplaza por arcos. Pero el sistema conserva el ángulo recto: el punto donde la curva se quiebra a 90° para iniciar un trazo recto es un rasgo deliberado, no una excepción. La curva resuelve la forma; el ángulo recto marca la transición.</div></div></div>
+  <div class="reveal"><div class="regla"><div class="regla-numero">Regla 02</div><div class="regla-titulo">Cada letra se resuelve con el mínimo de trazos.</div><div class="regla-texto">Un gesto curvo continuo resuelve la estructura principal de la letra. Los trazos adicionales se reducen al mínimo imprescindible.</div></div></div>
+  <div class="reveal"><div class="regla"><div class="regla-numero">Regla 03</div><div class="regla-titulo">La identidad se logra por reducción, no por acumulación.</div><div class="regla-texto">Lo que diferencia una letra de otra no es añadir trazos, sino conservar solo el rasgo mínimo que la hace reconocible. En la M, un asta corta paralela es suficiente para distinguirla de la N. En la E, una barra horizontal corta la distingue de la C.</div></div></div>
+  <div class="reveal"><div class="regla"><div class="regla-numero">Regla 04</div><div class="regla-titulo">Las letras rompen la línea base.</div><div class="regla-texto">La M arranca por debajo del renglón. La pierna de la R desciende bajo él. Las mayúsculas invaden la zona de los descendentes, que normalmente es territorio de las minúsculas.</div></div></div>
+  <div class="reveal"><div class="regla"><div class="regla-numero">Regla 05</div><div class="regla-titulo">Las panzas se sobredimensionan.</div><div class="regla-texto">En la R, la panza baja hasta el tercio inferior del asta, mucho más abajo que en una R convencional. Este rasgo probablemente se repite en la P, la B y la D.</div></div></div>
+</section>
+
+<section class="laboratorio">
+  <div class="divider reveal"><span class="divider-line"></span><span class="divider-symbol">LETRAS DEDUCIDAS</span><span class="divider-line"></span></div>
+  <h2 class="reveal">El laboratorio</h2>
+  <p class="subtitle reveal">Hipótesis tipográficas a partir de dos letras reales</p>
+  <p class="intro reveal">Solo tengo dos letras reales: la M y la R. Pero aplicando las reglas del sistema he empezado a deducir cómo serían las demás. Estas son hipótesis — las letras que el sistema produciría si sigue su propia lógica. Cada vez que alguien me envíe una letra real, podré confirmar o corregir estas deducciones.</p>
+
+  <div class="grupo-label reveal">Grupo 1 — Estructura de arco + asta</div>
+  <div class="grupo reveal">
+    <div class="letra-card">
+      <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <path d="M 35 220 C 22 170, 18 100, 30 60 C 45 22, 90 12, 140 18" fill="none"/>
+        <line x1="140" y1="18" x2="140" y2="200"/>
+        <line x1="115" y1="50" x2="115" y2="155"/>
+      </svg>
+      <div class="letra-nombre">M</div><div class="letra-estado estado-conocida">Conocida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <path d="M 35 220 C 22 170, 18 100, 30 60 C 45 22, 90 12, 140 18" fill="none"/>
+        <line x1="140" y1="18" x2="140" y2="200"/>
+      </svg>
+      <div class="letra-nombre">N</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <path d="M 35 220 C 22 170, 18 100, 30 60 C 45 22, 90 12, 140 18" fill="none"/>
+        <line x1="140" y1="18" x2="140" y2="200"/>
+        <line x1="52" y1="155" x2="135" y2="155"/>
+      </svg>
+      <div class="letra-nombre">A</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+  </div>
+
+  <div class="grupo-label reveal">Grupo 2 — Estructura de asta + panza</div>
+  <div class="grupo reveal">
+    <div class="letra-card">
+      <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <line x1="55" y1="200" x2="55" y2="30"/>
+        <path d="M 55 30 C 70 28, 145 30, 148 70 C 151 110, 120 138, 55 140" fill="none"/>
+        <path d="M 55 140 C 75 155, 110 185, 135 215 C 142 223, 150 224, 155 219" fill="none"/>
+      </svg>
+      <div class="letra-nombre">R</div><div class="letra-estado estado-conocida">Conocida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <line x1="55" y1="200" x2="55" y2="30"/>
+        <path d="M 55 30 C 70 28, 145 30, 148 70 C 151 110, 120 138, 55 140" fill="none"/>
+      </svg>
+      <div class="letra-nombre">P</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <line x1="55" y1="200" x2="55" y2="30"/>
+        <path d="M 55 30 C 70 28, 145 28, 148 65 C 151 100, 120 115, 55 117" fill="none"/>
+        <path d="M 55 117 C 70 115, 150 112, 153 148 C 156 184, 120 198, 55 200" fill="none"/>
+      </svg>
+      <div class="letra-nombre">B</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="130" viewBox="0 0 200 260" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <line x1="10" y1="200" x2="190" y2="200" stroke="#eee" stroke-width="0.75" stroke-dasharray="4,3"/>
+        <line x1="55" y1="200" x2="55" y2="30"/>
+        <path d="M 55 30 C 70 26, 170 25, 172 100 C 174 175, 100 215, 75 225" fill="none"/>
+      </svg>
+      <div class="letra-nombre">D</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+  </div>
+
+  <div class="grupo-label reveal">Grupo 3 — Vocales</div>
+  <div class="grupo reveal">
+    <div class="letra-card">
+      <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <path d="M 45 25 C 43 75, 38 130, 50 158 C 65 188, 135 190, 150 160 C 162 132, 158 75, 155 25" fill="none"/>
+      </svg>
+      <div class="letra-nombre">U</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <path d="M 98 28 C 55 24, 38 60, 40 108 C 42 155, 58 192, 102 189 C 145 186, 162 152, 160 106 C 158 60, 142 26, 102 28" fill="none"/>
+      </svg>
+      <div class="letra-nombre">O</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <path d="M 100 195 C 99 155, 101 115, 100 80 C 99 55, 101 35, 100 25" fill="none"/>
+      </svg>
+      <div class="letra-nombre">I</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+    <div class="letra-card">
+      <svg width="100" height="120" viewBox="0 0 200 220" fill="none" stroke="#1e3a56" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.5">
+        <path d="M 145 30 C 95 26, 42 55, 40 108 C 38 162, 92 195, 145 190" fill="none"/>
+        <line x1="58" y1="110" x2="105" y2="110"/>
+      </svg>
+      <div class="letra-nombre">E</div><div class="letra-estado estado-deducida">Deducida</div>
+    </div>
+  </div>
+  <p class="laboratorio-cta reveal">¿Tienes una servilleta con alguna de estas iniciales? Una foto bastaría para confirmar si la deducción es correcta.</p>
+</section>
+
+<section class="goal-section section">
+  <div class="reveal"><p class="label">El destino</p><p>Si conseguimos reunir todas las letras, voy a digitalizar esta tipografía y crear <em>una fuente libre</em>. Para que cualquiera pueda usarla. Para que un sistema de letras diseñado en un internado de los años 50 y olvidado en cajones, vuelva a vivir.</p></div>
+</section>
+
+<section class="cta-section section">
+  <div class="reveal">
+    <h2>Puede estar en un cajón, en un arcón, en un mercadillo</h2>
+    <p>Busco servilletas, sábanas o cualquier pieza de ajuar escolar de internados españoles de los años 40, 50 o 60 que tenga iniciales con esta misma tipografía.</p>
+    <p>No importa el estado. No importa la letra. Una sola foto es suficiente.</p>
+    <p>Y si no tienes ninguna servilleta: comparte esto. Porque la persona que sí la tiene puede ser alguien que tú conozcas.</p>
+  </div>
+  <div class="cta-actions reveal">
+    <a href="https://twitter.com/intent/tweet?text=Buscan%20servilletas%20de%20internados%20de%20los%20a%C3%B1os%2050%20para%20rescatar%20una%20tipograf%C3%ADa%20olvidada%20y%20convertirla%20en%20una%20fuente%20libre.%20%23LaServilleta&url=https://laservilleta.lovable.app" target="_blank" class="cta-primary">Compartir en Twitter</a>
+    <a href="mailto:la.servilleta.908@gmail.com?subject=Tengo%20una%20letra%20para%20La%20Servilleta" class="cta-email">Escribirme un email</a>
+    <a href="#" class="cta-secondary">O escríbeme un DM con la foto</a>
+  </div>
+</section>
+
+<footer class="section"><p>#LaServilleta</p></footer>
+
+<script>
+  const letters='ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'.split('');
+  const found=new Set(['M','R']);
+  const deduced=new Set(['A','B','D','E','I','N','O','P','U']);
+  const grid=document.getElementById('alphabetGrid');
+  letters.forEach(l=>{const c=document.createElement('div');c.className='letter-cell '+(found.has(l)?'found':deduced.has(l)?'deduced':'missing');c.textContent=l;grid.appendChild(c)});
+  const reveals=document.querySelectorAll('.reveal');
+  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')})},{threshold:0.15});
+  reveals.forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
