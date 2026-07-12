@@ -9,7 +9,7 @@ import { defineMcp } from "npm:@lovable.dev/mcp-js@0.20.1";
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.20.1";
 var LETTERS = "ABCDEFGHIJKLMN\xD1OPQRSTUVWXYZ".split("");
 var FOUND = ["M", "R"];
-var DEDUCED = ["A", "B", "D", "E", "I", "N", "\xD1", "O", "P", "Q", "U", "V", "W"];
+var DEDUCED = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "N", "\xD1", "O", "P", "Q", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var get_alphabet_status_default = defineTool({
   name: "get_alphabet_status",
   title: "Alphabet status",
