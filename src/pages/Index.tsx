@@ -610,8 +610,41 @@ const Index = () => {
         <div ref={reveal} className="reveal">
           <p className="label">El destino</p>
           <p>
-            Si conseguimos reunir todas las letras, voy a digitalizar esta tipografía y crear{" "}
-            <em>una fuente libre</em>. Para que cualquiera pueda usarla. Para que un sistema de letras diseñado en un internado de los años 50 y olvidado en cajones, vuelva a vivir.
+            Con la ayuda de la IA he conseguido completar el abecedario y crear la tipografía. Aquí la tienes para que la descargues y la disfrutes:{" "}
+            <em>una fuente libre</em>, para que cualquiera pueda usarla.
+          </p>
+          <p>
+            Las letras deducidas siguen esperando una servilleta que las confirme, y la fuente se actualizará cuando lleguen.
+          </p>
+          <p>
+            Demos vida a este sistema de letras, diseñado en un internado de los años 50 y olvidado en un cajón.
+          </p>
+        </div>
+        <div ref={reveal} className="goal-actions reveal">
+          <a
+            href="/fonts/LaServilleta-Regular.ttf"
+            download
+            className="cta-primary"
+          >
+            Descargar la fuente (.ttf)
+          </a>
+          <a
+            href="/fonts/LaServilleta-Regular.woff2"
+            download
+            className="cta-secondary"
+          >
+            Versión para web (.woff2)
+          </a>
+          <p className="goal-nota">
+            Licencia{" "}
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/deed.es"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CC BY 4.0
+            </a>
+            {" "}· úsala, cópiala y modifícala, también con fines comerciales, citando «La Servilleta»
           </p>
         </div>
       </section>
