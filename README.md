@@ -71,3 +71,11 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Licencia
+
+La tipografía y los dibujos de letras de La Servilleta se publican bajo la licencia [Creative Commons Atribución 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es). Puedes usarlos, copiarlos, modificarlos y distribuirlos, también con fines comerciales, siempre que reconozcas la autoría: "La Servilleta" (laservilleta.lovable.app).
+
+El texto completo de la licencia está en el archivo [LICENSE](LICENSE).
+
+© 2026 La Servilleta
