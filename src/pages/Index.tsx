@@ -535,11 +535,11 @@ const Index = () => {
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
               <line x1="10" y1="190" x2="190" y2="190" stroke="#eee" strokeWidth="0.75" strokeDasharray="4,3" />
               <path d="M 130 30 C 80 28, 42 55, 40 110 C 38 165, 78 195, 130 192" fill="none" />
-              <line x1="131" y1="160" x2="94" y2="160" />
+              <line x1="130" y1="192" x2="130" y2="125" />
             </svg>
             <div className="letra-nombre">G</div>
             <div className="letra-estado estado-deducida">Deducida</div>
-            <div className="letra-nota">La C más el marcador en el tercio inferior, la cota de la panza de la R (regla 05).</div>
+            <div className="letra-nota">La C más el quiebro de 90° al cierre del arco (regla 01).</div>
           </div>
           <div className="letra-card">
             <svg width="100" height="120" viewBox="0 0 200 240" fill="none" stroke="#1e3a56" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" opacity="0.4">
