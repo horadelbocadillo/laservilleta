@@ -558,7 +558,8 @@ body {
   margin: 0 auto;
 }
 
-.goal-section .label {
+.goal-section .label,
+.cta-section .label {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.6rem;
   letter-spacing: 0.35em;
