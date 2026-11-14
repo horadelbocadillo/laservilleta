@@ -652,8 +652,8 @@ const Index = () => {
       {/* LA PETICIÓN */}
       <section id="colabora" className="cta-section section">
         <div ref={reveal} className="reveal">
-          <h2>Puede estar en un cajón, en un arcón, en un mercadillo</h2>
-          <p>Busco servilletas, sábanas o cualquier pieza de ajuar escolar de internados españoles de los años 40, 50 o 60 que tenga iniciales con esta misma tipografía.</p>
+          <h2>Seguiré buscando otra servilleta. Puede estar en un cajón, en un arcón, en un mercadillo</h2>
+          <p>Si tienes servilletas, sábanas o cualquier pieza de ajuar escolar de internados españoles de los años 40, 50 o 60 que tenga iniciales con esta misma tipografía, escríbeme.</p>
           <p>No importa el estado. No importa la letra. Una sola foto es suficiente.</p>
           <p>Y si no tienes ninguna servilleta: comparte esto. Porque la persona que sí la tiene puede ser alguien que tú conozcas.</p>
         </div>
