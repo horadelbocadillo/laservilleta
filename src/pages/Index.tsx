@@ -644,7 +644,7 @@ const Index = () => {
             >
               CC BY 4.0
             </a>
-            {" "}· úsala, cópiala y modifícala, también con fines comerciales, citando «La Servilleta»
+            {" "}· úsala citando «La Servilleta»
           </p>
         </div>
       </section>
@@ -679,7 +679,7 @@ const Index = () => {
             rel="noopener noreferrer"
             className="cta-secondary"
           >
-            O escríbeme un DM con la foto
+            O mándame un DM con la foto
           </a>
         </div>
       </section>
